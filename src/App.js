@@ -4,7 +4,7 @@ import "./App.css";
 export default function App() {
   return (
     <div className="App">
-      <footer>
+      <footer className="pt-3">
         <small>
           <a
             href="https://github.com/solomiiasabat/react-weather-forecast"

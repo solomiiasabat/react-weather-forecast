@@ -19,26 +19,27 @@ export default function WeatherDesign() {
           </div>
         </div>
       </form>
-      <h2>Kyiv</h2>
+      <h1 className="cityname mt-2">Kyiv</h1>
       <p>Monday, 7:00</p>
-      <h1>
+      <h1 className="temperature">
         <img
           src="https://png.pngtree.com/png-vector/20190719/ourlarge/pngtree-cloud-icon-png-image_1558213.jpg"
           alt="weather description icon"
           width={175}
+          className="main-weather-icon"
         ></img>
         23°C
       </h1>
-      <p>Mostly cloudy</p>
+      <p className="weather-description">Mostly cloudy</p>
       <div className="row">
         <div className="col-6">
-          <ul>
+          <ul className="wind">
             <li>Wind</li>
             <li>💨 4km/h</li>
           </ul>
         </div>
         <div className="col-6">
-          <ul>
+          <ul className="humidity">
             <li>Humidity</li>
             <li>💦 90%</li>
           </ul>
