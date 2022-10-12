@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "./WeatherDesign.css";
 import axios from "axios";
-import ForecastDate from "./ForecastDate";
+import MainWeatherComponents from "./MainWeatherComponents";
 
-export default function WeatherDesign() {
+export default function WeatherDesign(props) {
   const [weatherForecast, setWeatherForecast] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
     console.log(response.data);
@@ -20,10 +21,25 @@ export default function WeatherDesign() {
     });
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
+  function search() {
+    const apiKey = "8542913933d6e9526040ad6e6691ada1";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
   if (weatherForecast.ready) {
     return (
       <div className="WeatherDesign">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-9">
               <input
@@ -31,6 +47,7 @@ export default function WeatherDesign() {
                 placeholder="Enter your city"
                 class="form-control"
                 id="weather-engine"
+                onChange={handleCityChange}
               ></input>
             </div>
             <div className="col-3">
@@ -38,44 +55,11 @@ export default function WeatherDesign() {
             </div>
           </div>
         </form>
-        <h1 className="cityname mt-2">Kyiv</h1>
-        <p>
-          <ForecastDate date={weatherForecast.date} />
-        </p>
-        <h1 className="temperature">
-          <img
-            src="https://png.pngtree.com/png-vector/20190719/ourlarge/pngtree-cloud-icon-png-image_1558213.jpg"
-            alt="weather description icon"
-            width={175}
-            className="main-weather-icon"
-          ></img>
-          {weatherForecast.temperature}°C
-        </h1>
-        <p className="weather-description text-capitalize">
-          {weatherForecast.description}
-        </p>
-        <div className="row">
-          <div className="col-6">
-            <ul className="wind">
-              <li>Wind</li>
-              <li>💨 {weatherForecast.wind}km/h</li>
-            </ul>
-          </div>
-          <div className="col-6">
-            <ul className="humidity">
-              <li>Humidity</li>
-              <li>💦 {weatherForecast.humidity}%</li>
-            </ul>
-          </div>
-        </div>
+        <MainWeatherComponents data={weatherForecast} />
       </div>
     );
   } else {
-    let city = "Kyiv";
-    const apiKey = "8542913933d6e9526040ad6e6691ada1";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return "Loading";
   }
 }
