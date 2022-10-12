@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import "./WeatherDesign.css";
 import axios from "axios";
+import ForecastDate from "./ForecastDate";
 
 export default function WeatherDesign() {
   const [weatherForecast, setWeatherForecast] = useState({ ready: false });
 
   function handleResponse(response) {
     console.log(response.data);
+
     setWeatherForecast({
       ready: true,
       temperature: Math.round(response.data.main.temp),
@@ -14,6 +16,7 @@ export default function WeatherDesign() {
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       city: response.data.name,
+      date: new Date(response.data.dt * 1000),
     });
   }
 
@@ -36,7 +39,9 @@ export default function WeatherDesign() {
           </div>
         </form>
         <h1 className="cityname mt-2">Kyiv</h1>
-        <p>Monday, 7:00</p>
+        <p>
+          <ForecastDate date={weatherForecast.date} />
+        </p>
         <h1 className="temperature">
           <img
             src="https://png.pngtree.com/png-vector/20190719/ourlarge/pngtree-cloud-icon-png-image_1558213.jpg"
