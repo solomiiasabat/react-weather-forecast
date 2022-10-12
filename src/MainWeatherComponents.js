@@ -1,5 +1,6 @@
 import React from "react";
 import ForecastDate from "./ForecastDate";
+import WeatherIcon from "./WeatherIcon";
 
 export default function MainWeatherComponents(props) {
   return (
@@ -8,15 +9,12 @@ export default function MainWeatherComponents(props) {
       <p>
         <ForecastDate date={props.data.date} />
       </p>
-      <h1 className="temperature">
-        <img
-          src="https://png.pngtree.com/png-vector/20190719/ourlarge/pngtree-cloud-icon-png-image_1558213.jpg"
-          alt="weather description icon"
-          width={175}
-          className="main-weather-icon"
-        ></img>
-        {props.data.temperature}°C
-      </h1>
+      <div>
+        <h1 className="temperature">
+          <WeatherIcon code={props.data.icon} size={52} />
+          {props.data.temperature}°C
+        </h1>
+      </div>
       <p className="weather-description text-capitalize">
         {props.data.description}
       </p>

@@ -18,6 +18,7 @@ export default function WeatherDesign(props) {
       humidity: response.data.main.humidity,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
+      icon: response.data.weather[0].icon,
     });
   }
 

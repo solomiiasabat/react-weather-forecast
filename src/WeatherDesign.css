@@ -11,15 +11,21 @@
 
 .temperature {
   font-size: 60px;
-  padding-left: 20%;
+  padding-left: 30%;
   position: relative;
   top: -20px;
+}
+
+canvas {
+  padding: 10px;
+  position: relative;
+  top: 17px;
 }
 
 .weather-description {
   padding-left: 37%;
   position: relative;
-  top: -60px;
+  top: -10px;
 }
 
 ul {
