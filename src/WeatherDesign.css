@@ -49,8 +49,9 @@ ul {
     margin-left: 10px;
     margin-right: 10px;
     padding-left: 15px;
-    padding-right: 20px;
-    border: 1px solid transparent;
+    padding-right: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
   }
 
   .cityname {
@@ -58,31 +59,27 @@ ul {
   }
 
   .main-weather-icon {
-    width: 100px;
+    width: 10px;
   }
 
   .temperature {
     font-size: 50px;
     padding-left: 0;
     text-align: center;
-    padding-top: 13px;
+    padding-top: 25px;
   }
 
   .weather-description {
-    padding-left: 30px;
+    padding-left: 15px;
     top: -20px;
     text-align: center;
   }
 
   .wind {
-    padding-left: 58%;
+    padding-left: 55%;
   }
 
   .humidity {
-    padding-right: 18%;
+    padding-right: 23%;
   }
-}
-
-row {
-  margin-right: 5;
 }
