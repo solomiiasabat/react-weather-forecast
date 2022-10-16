@@ -1,0 +1,17 @@
+.WeatherDailyForecast {
+  text-align: center;
+}
+
+.WeatherDailyForecast canvas {
+  padding: 0;
+  top: 3px;
+}
+
+.Temperature-max {
+  padding: 6px;
+}
+
+.Temperature-min {
+  padding: 6px;
+  opacity: 0.6;
+}

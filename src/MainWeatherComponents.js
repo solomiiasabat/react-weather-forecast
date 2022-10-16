@@ -11,7 +11,7 @@ export default function MainWeatherComponents(props) {
       </p>
       <div>
         <h1 className="temperature">
-          <WeatherIcon code={props.data.icon} size={52} />
+          <WeatherIcon code={props.data.icon} size={52} animate={false} />
           {props.data.temperature}°C
         </h1>
       </div>
@@ -22,13 +22,13 @@ export default function MainWeatherComponents(props) {
         <div className="col-6">
           <ul className="wind">
             <li>Wind</li>
-            <li>💨 {props.data.wind}km/h</li>
+            <li>💨 {Math.round(props.data.wind)}km/h</li>
           </ul>
         </div>
         <div className="col-6">
           <ul className="humidity">
             <li>Humidity</li>
-            <li>💦 {props.data.humidity}%</li>
+            <li>💦 {Math.round(props.data.humidity)}%</li>
           </ul>
         </div>
       </div>
