@@ -1,6 +1,9 @@
 import React from "react";
 import ForecastDate from "./ForecastDate";
 import WeatherIcon from "./WeatherIcon";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faWind } from "@fortawesome/free-solid-svg-icons";
+import { faDroplet } from "@fortawesome/free-solid-svg-icons";
 
 export default function MainWeatherComponents(props) {
   return (
@@ -22,13 +25,19 @@ export default function MainWeatherComponents(props) {
         <div className="col-6">
           <ul className="wind">
             <li>Wind</li>
-            <li>💨 {Math.round(props.data.wind)}km/h</li>
+            <li>
+              <FontAwesomeIcon icon={faWind} /> {Math.round(props.data.wind)}{" "}
+              km/h
+            </li>
           </ul>
         </div>
         <div className="col-6">
           <ul className="humidity">
             <li>Humidity</li>
-            <li>💦 {Math.round(props.data.humidity)}%</li>
+            <li>
+              <FontAwesomeIcon icon={faDroplet} />{" "}
+              {Math.round(props.data.humidity)}%
+            </li>
           </ul>
         </div>
       </div>
