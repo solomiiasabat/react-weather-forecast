@@ -4,9 +4,11 @@
   margin-right: 18%;
   padding-left: 40px;
   padding-top: 10px;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 8, 51, 0.227);
   font-family: "Mali", cursive;
   font-family: "Montserrat", sans-serif;
+  background-image: linear-gradient(rgba(0, 8, 51, 0.2), rgba(0, 8, 51, 0.227));
+  color: aliceblue;
 }
 
 .temperature {
