@@ -10,18 +10,18 @@ export default function MainWeatherComponents(props) {
   return (
     <div className="MainWeatherComponents">
       <h1 className="cityname mt-2">{props.data.city}</h1>
-      <p>
+      <div>
         <ForecastDate date={props.data.date} />
-      </p>
+      </div>
       <div>
         <h1 className="temperature">
           <WeatherIcon code={props.data.icon} size={52} animate={true} />
           {props.data.temperature}°C
         </h1>
       </div>
-      <p className="weather-description text-capitalize">
+      <div className="weather-description text-capitalize">
         {props.data.description}
-      </p>
+      </div>
       <div className="row">
         <div className="col-6">
           <ul className="wind">

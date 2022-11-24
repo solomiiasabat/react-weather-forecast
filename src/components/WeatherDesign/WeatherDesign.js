@@ -9,8 +9,6 @@ export default function WeatherDesign(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
-    console.log(response.data);
-
     setWeatherForecast({
       ready: true,
       temperature: Math.round(response.data.main.temp),
@@ -48,7 +46,7 @@ export default function WeatherDesign(props) {
               <input
                 type="search"
                 placeholder="Enter your city"
-                class="form-control"
+                className="form-control"
                 id="weather-engine"
                 onChange={handleCityChange}
               ></input>
