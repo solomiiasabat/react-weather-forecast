@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import EachDayForecast from "./EachDayForecast";
-import "./WeatherDailyForecast.css";
+import EachDayForecast from "../EachDayForecast/EachDayForecast";
+import "../WeatherDailyForecast/WeatherDailyForecast.css";
 import axios from "axios";
 
 export default function WeatherDailyForecast(props) {

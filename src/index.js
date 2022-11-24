@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client";
 
 import "./index.css";
 
-import Footer from "./Footer";
-import WeatherDesign from "./WeatherDesign";
+import Footer from "./components/Footer/Footer";
+import WeatherDesign from "./components/WeatherDesign/WeatherDesign";
 
 import "bootstrap/dist/css/bootstrap.css";
 

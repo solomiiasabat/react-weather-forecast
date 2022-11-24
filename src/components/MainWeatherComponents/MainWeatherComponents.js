@@ -1,7 +1,7 @@
 import React from "react";
-import ForecastDate from "./ForecastDate";
-import WeatherIcon from "./WeatherIcon";
-import "./MainWeatherComponent.css";
+import ForecastDate from "../ForecastDate";
+import WeatherIcon from "../WeatherIcon";
+import "./MainWeatherComponents.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWind } from "@fortawesome/free-solid-svg-icons";
 import { faDroplet } from "@fortawesome/free-solid-svg-icons";
@@ -15,7 +15,7 @@ export default function MainWeatherComponents(props) {
       </p>
       <div>
         <h1 className="temperature">
-          <WeatherIcon code={props.data.icon} size={52} animate={false} />
+          <WeatherIcon code={props.data.icon} size={52} animate={true} />
           {props.data.temperature}°C
         </h1>
       </div>

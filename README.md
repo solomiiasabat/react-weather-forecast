@@ -20,3 +20,4 @@ You may also see any lint errors in the console.
 - Type your city in a search engine.
 - App recognizes only cities written in ENGLISH.
 - App is not case-sensitive. Uppercase and lowercase letters mean the same here.
+- Kyiv is set as a default city.
