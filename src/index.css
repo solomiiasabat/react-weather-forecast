@@ -4,7 +4,7 @@ body {
   margin: 0;
   font-family: "Mali", cursive;
   font-family: "Montserrat", sans-serif;
-  background-image: url("./pictures/day.jpg");
+  background-image: url(./pictures/day.jpg);
   background-size: cover;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
