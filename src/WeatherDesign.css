@@ -11,41 +11,6 @@
   color: aliceblue;
 }
 
-.temperature {
-  font-size: 60px;
-  padding-left: 30%;
-  position: relative;
-  top: -20px;
-}
-
-canvas {
-  padding: 10px;
-  position: relative;
-  top: 17px;
-}
-
-.weather-description {
-  padding-left: 40%;
-  position: relative;
-  top: -10px;
-}
-
-ul {
-  list-style: none;
-  position: relative;
-  top: -20px;
-  font-size: 12px;
-  padding-top: 10px;
-}
-
-.wind {
-  padding-left: 65%;
-}
-
-.humidity {
-  padding-right: 40%;
-}
-
 @media (max-width: 900px) {
   .WeatherDesign {
     margin-left: 10px;

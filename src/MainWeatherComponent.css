@@ -1,0 +1,67 @@
+.temperature {
+  font-size: 60px;
+  text-align: center;
+  position: relative;
+  top: -20px;
+}
+
+canvas {
+  padding: 10px;
+  position: relative;
+  top: 17px;
+}
+
+.weather-description {
+  text-align: center;
+  position: relative;
+  top: -10px;
+}
+
+ul {
+  list-style: none;
+  position: relative;
+  top: -20px;
+  font-size: 12px;
+  padding-top: 10px;
+}
+
+.wind {
+  text-align: center;
+  padding-left: 50%;
+}
+
+.humidity {
+  text-align: center;
+  padding-right: 50%;
+}
+
+@media (max-width: 900px) {
+  .cityname {
+    padding-top: 12px;
+  }
+
+  .main-weather-icon {
+    width: 10px;
+  }
+
+  .temperature {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 25px;
+  }
+
+  .weather-description {
+    top: -20px;
+    text-align: center;
+  }
+
+  .wind {
+    text-align: center;
+    padding-left: 35%;
+  }
+
+  .humidity {
+    text-align: center;
+    padding-right: 35%;
+  }
+}
