@@ -1,21 +1,43 @@
 # Weather Forecast App Built in React
 
-This project was built in React's programming workshop "SheCodes React." \
-This weather app provides information on the current weather state (temperature, weather description, humidity, and wind speed) and forecasts for the next five days with the minimum and maximum temperatures for any city in the world.
+## 📖 Project description
 
-## How to start edit this app?
+📍 This project was built in React's programming workshop "SheCodes React." \
+📍 This weather app provides information on the current weather state (temperature, weather description, humidity, and wind speed) and forecasts for the next five days with the minimum and maximum temperatures for any city in the world.
 
-Open new terminal and use the script "npm start".
+## 💻 How to run this app?
 
-### `npm start`
+Create a new folder "my-project".
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+ mkdir my-project
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Clone the project
 
-## How this app works
+```bash
+  git clone https://github.com/solomiiasabat/react-weather-forecast.git
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm start
+```
+
+## ❓How this app works
 
 - Type your city in a search engine.
 - App recognizes only cities written in ENGLISH.
