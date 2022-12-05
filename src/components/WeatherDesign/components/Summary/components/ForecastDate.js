@@ -1,7 +1,7 @@
 import React from "react";
 
 export default function ForecastDate(props) {
-  let days = [
+  const days = [
     "Sunday",
     "Monday",
     "Tuesday",
@@ -11,7 +11,7 @@ export default function ForecastDate(props) {
     "Saturday",
   ];
 
-  let day = days[props.date.getDay()];
+  const day = days[props.date.getDay()];
   let hours = props.date.getHours();
   let minutes = props.date.getMinutes();
 

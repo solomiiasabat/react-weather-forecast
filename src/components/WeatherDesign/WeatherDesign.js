@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./WeatherDesign.css";
 import axios from "axios";
-import MainWeatherComponents from "./components/MainWeatherComponents/MainWeatherComponents";
+import Summary from "./components/Summary/Summary";
 import WeatherDailyForecast from "./components/WeatherDailyForecast/WeatherDailyForecast";
 
 export default function WeatherDesign(props) {
@@ -33,7 +33,7 @@ export default function WeatherDesign(props) {
 
   function search() {
     const apiKey = "8542913933d6e9526040ad6e6691ada1";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -56,7 +56,7 @@ export default function WeatherDesign(props) {
             </div>
           </div>
         </form>
-        <MainWeatherComponents data={weatherForecast} />
+        <Summary data={weatherForecast} />
         <WeatherDailyForecast coordinates={weatherForecast.coordinates} />
       </div>
     );

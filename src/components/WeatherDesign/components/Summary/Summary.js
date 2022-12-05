@@ -1,7 +1,7 @@
 import React from "react";
 import ForecastDate from "./components/ForecastDate";
-import WeatherIcon from "./components/WeatherIcon";
-import "./MainWeatherComponents.css";
+import WeatherIcon from "../WeatherIcon";
+import "./Summary.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWind } from "@fortawesome/free-solid-svg-icons";
 import { faDroplet } from "@fortawesome/free-solid-svg-icons";
