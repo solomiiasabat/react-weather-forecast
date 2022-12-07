@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import "./WeatherDesign.css";
-import axios from "axios";
+//import axios from "axios";
 import Summary from "./components/Summary/Summary";
 import WeatherDailyForecast from "./components/WeatherDailyForecast/WeatherDailyForecast";
+import { generalApiCall } from "./functionForApiCall";
 
 export default function WeatherDesign(props) {
   const [weatherForecast, setWeatherForecast] = useState({ ready: false });
@@ -32,9 +33,10 @@ export default function WeatherDesign(props) {
   }
 
   function search() {
-    const apiKey = "8542913933d6e9526040ad6e6691ada1";
-    const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleResponse);
+    //const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+    //const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    //axios.get(apiUrl).then(handleResponse);
+    generalApiCall(city, handleResponse);
   }
 
   if (weatherForecast.ready) {
@@ -62,6 +64,6 @@ export default function WeatherDesign(props) {
     );
   } else {
     search();
-    return "Loading";
+    return <h1 className="text-white">Loading...</h1>;
   }
 }

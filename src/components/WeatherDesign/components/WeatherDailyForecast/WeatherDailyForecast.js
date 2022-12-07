@@ -11,6 +11,10 @@ export default function WeatherDailyForecast(props) {
     setLoaded(false);
   }, [props.coordinates]);
 
+  useEffect(() => {
+    forecastApiCall(props.coordinates, setLoaded, setForecast);
+  }, [props.coordinates]);
+
   if (loaded) {
     return (
       <div className="WeatherDailyForecast">
@@ -29,9 +33,5 @@ export default function WeatherDailyForecast(props) {
         </div>
       </div>
     );
-  } else {
-    forecastApiCall([props.coordinates], setLoaded, setForecast);
-
-    return null;
   }
 }
