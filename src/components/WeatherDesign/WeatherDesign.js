@@ -12,14 +12,14 @@ export default function WeatherDesign(props) {
   function handleResponse(response) {
     setWeatherForecast({
       ready: true,
-      temperature: Math.round(response.data.main.temp),
-      description: response.data.weather[0].description,
-      wind: response.data.wind.speed,
-      humidity: response.data.main.humidity,
-      city: response.data.name,
-      date: new Date(response.data.dt * 1000),
-      icon: response.data.weather[0].icon,
-      coordinates: response.data.coord,
+      temperature: Math.round(response.main.temp),
+      description: response.weather[0].description,
+      wind: response.wind.speed,
+      humidity: response.main.humidity,
+      city: response.name,
+      date: new Date(response.dt * 1000),
+      icon: response.weather[0].icon,
+      coordinates: response.coord,
     });
   }
 
